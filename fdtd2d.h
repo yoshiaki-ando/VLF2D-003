@@ -79,7 +79,7 @@ constexpr double OMG { FREQ * 2. * M_PI };
 constexpr int Nr_iono { int( (Rr - Lower_boundary_of_ionosphere) / dr ) + 1 };
 constexpr int Nr_atmo { int( Lower_boundary_of_ionosphere / dr ) };
 
-double I(double t);
+double I_Dl(double t);
 double Jr(double t);
 
 Eigen::Matrix3d define_SIGzr(double z);

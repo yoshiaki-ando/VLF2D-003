@@ -106,7 +106,7 @@ int main(int argc, char **argv){
     update_Dph_PML(Dph[NEW], Dph_r, Dph_th, Hth, Hr, C01, C02);
 
     double t = (n - 0.5) * Dt;
-    Dr[NEW][0][0] -= Dt * Jr(t); //θ=0, i=j=0  //Jr
+    Dr[NEW][0][0] -= Dt * Jr(t); /* 電流源の位置は r=R0+Δr, θ=0 に固定 */
 
     update_Er(Er, Eth, Eph, Dr, Dth, Dph, NEW, OLD, C, F);
     update_Eth(Er, Eth, Eph, Dr, Dth, Dph, NEW, OLD, C, F);
