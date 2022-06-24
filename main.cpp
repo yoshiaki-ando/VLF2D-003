@@ -92,7 +92,7 @@ int main(int argc, char **argv){
   ///時間ループ///
   for(int n = 1; n <= Nt; n++){
     if ( n%100 == 0 ){
-      std::cout << n << " / " << Nt << " : " << Lp/1000 << "\n";
+      std::cout << n << " / " << Nt << "\n";
     }
     
     int NEW = (n+1) % 2;
