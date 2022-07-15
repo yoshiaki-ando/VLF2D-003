@@ -43,8 +43,8 @@ int main(int argc, char **argv){
   Eigen::Matrix3d *F1 = new Eigen::Matrix3d [Nr_iono*(Nth+1)];
 
   for(int i = 0; i < Nr_iono; i++){
-    C[i] = C1 + i*Nth;
-    F[i] = F1 + i*Nth;
+    C[i] = C1 + i*(Nth+1);
+    F[i] = F1 + i*(Nth+1);
     for(int j = 0; j <= Nth; j++){
       C[i][j] << 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0;
       F[i][j] << 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0;
